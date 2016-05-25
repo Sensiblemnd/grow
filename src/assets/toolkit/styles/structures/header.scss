@@ -1,0 +1,17 @@
+header {
+	color: #fff;
+	font-size: 5.4rem;
+	line-height: 1;
+	padding: 38px 40px;
+	max-width: 1300px;
+	margin: 0 auto;
+	position: relative;
+	@media (max-width: 520px) {
+		font-size: 8vw;
+	}
+	.save-icon {
+		position: absolute;
+		right: 40px;
+		top: 50%;
+	}
+}

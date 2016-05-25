@@ -1,0 +1,32 @@
+.side-menu {
+	background-color: base-color('bluewood');
+	position: absolute;
+	top: 0;
+	left: -260px;
+	display: block;
+	height: 100%;
+	width: 260px;
+	padding: 60px 19px;
+	z-index: 2;
+	-ms-transition: left 0.5s ease-in-out; /*autoprefixer wont add this*/
+	    transition: left 0.5s ease-in-out;
+	&-footer {
+		position: absolute;
+		left: 38px;
+		bottom: 38px;
+		color: base-color('raven');
+		a {
+			color: base-color('raven');
+		}
+	}
+	&-open {
+		left: 0;
+	}
+	.hamburger-link{
+		position: absolute;
+		top: 20px;
+		right:20px;
+	}
+	
+
+}
