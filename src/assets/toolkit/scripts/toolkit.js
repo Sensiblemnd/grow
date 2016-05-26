@@ -9,7 +9,6 @@
 
 const $ = require('jquery');
 
-//<button data-button='Add '></button>
 let config = {
 	debug: true,
 	istouch:false,

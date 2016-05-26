@@ -6,6 +6,17 @@ nav {
 		text-decoration: none;
 		font-size: 1.8rem;
 		font-weight: 700;
+		 
+		&:hover,
+		.active {
+		.fa-circle {
+			color: base-color('amaranth');
+		}
+		.fa-check {
+			color: #fff;
+
+		}	
+	}
 	}
 
 	.fa-check-circle {
