@@ -14,7 +14,7 @@ let config = {
 	istouch:false,
 	touchOrClick: '',
 	init: function(){
-		var $htmlElem=$('html');
+		let $htmlElem=$('html');
 		this.istouch = $htmlElem.hasClass('touch')? true : false;
 		this.touchOrClick = this.istouch? 'touchend' :'click' ;
 	}
@@ -22,6 +22,7 @@ let config = {
 };
 config.init();
 let  log = {
+	InstagramImage: '',
 	debug: function(content){
 		if ((window.console && window.console.log) && config.debug){
 			console.log(content);
@@ -32,23 +33,15 @@ let  log = {
 let app = {
 	init: function() {
 		let that = this;
-		log.debug('asd');
+		
 		that.eventListener();
 		that.mobileMenu();
 		
 	},
 	eventListener: function(){
 		let that = this;
-		log.debug('asd');
-
-		$('.instagram-image').on(config.touchOrClick, function(e) {
-			if($(this).hasClass('active')){
-				$(this).removeClass('active');
-			}else{
-				$('.instagram-image').removeClass('active');
-				$(this).toggleClass('active');
-			};	
-		});
+		that.InstagramImage = $('.instagram-image');
+		$('.instagram-image').on(config.touchOrClick,that.flipCard);
 		
 	},
 	add: function(){
@@ -66,9 +59,14 @@ let app = {
 			$('.side-menu').toggleClass('side-menu-open');
 		});
 	},
-	flipCard: function(e) {
-		
-	}
+	flipCard: function(e) {	
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+		}else{
+			app.InstagramImage.removeClass('active');
+			$(this).addClass('active');
+		};
+	};
 };
 
 app.init();

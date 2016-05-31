@@ -1,11 +1,13 @@
 .instagram {
 	@include clearfix;
-	max-width: 1300px;
-	width: 260px;
+	
+	
 	margin: 0 auto;
 	@media (min-width: 420px) {
 		width: 100%;	
 	}
+
+
 	&-image {
 		float: left;
 	}
