@@ -1,0 +1,35 @@
+.info {
+	padding: 20px;
+	ul {
+		padding: 0;
+		margin: 0;
+		 list-style-type: none;
+		 li {
+			display: block;
+			padding-bottom: 10px;
+		 }	 
+	}
+	a {
+		
+		color: #fff;
+		text-decoration: none;
+		font-size: 2rem;
+		font-weight: 700;
+		position: relative;
+
+		&:before {
+			border-bottom: 2px solid #fff;
+			bottom: 0;
+			content: "";
+			left: 0;
+			position: absolute;
+			transition: width 0.2s ease-in-out;
+			width: 0;
+		}
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+}
